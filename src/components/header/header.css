@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 376px){
+    .menu-section {
+        position: absolute;
+        background-color: white;
+        z-index: 2;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .2s;
+    }
+    .menu-section.active {
+        transform: scaleX(1);
+    }
+    
+    .menu-backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .main-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 25px 20px;
+    }
+
+    .hamburg-menu {
+        margin-right: 0;
+    }
+
+    .main-header-menu {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0 20px 0 30px;
+        margin: 0;
+    }
+
+    .main-header-menu > li:first-child {
+        margin-right: 0;
+        margin-left: auto;
+        padding: 25px 0 5px 5px;
+    }
+
+    .main-header-menu > li {
+        margin-left: 0;
+        padding: 10px 5px;
+    }
+
+    .link-dropdown-menu {
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        padding: 5px;
+    }
+
+    .link-dropdown-menu:hover {
+        color: hsl(0, 0%, 0%);
+    }
+
+    .dropdown-menu {
+        height: 0;
+        position: relative;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    .link-dropdown-menu.active + .dropdown-menu {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .dropdown-menu > li {
+        padding: 8px;
+    }
+
+    .dropdown-menu > li > a {
+        color: hsl(0, 0%, 41%);
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .dropdown-menu > li > a > img {
+        margin: 0;
+        padding: 0 15px 0 0;
+    }
+
+    .buttons {
+        margin: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .buttons > button {
+        width: 100%;
+        margin: 0 5px;
+    }
+}
+@media screen and (min-width: 376px){
+    .menu-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .hamburg-menu {
+        display: none;
+    }
+
+    .main-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 50px;
+    }
+
+    .main-header-menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-left: 50px;
+        margin: 0;
+    }
+
+    .main-header-menu > li:first-child {
+        display: none;
+    }
+
+    .link-dropdown-menu {
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        padding: 5px;
+    }
+
+    .link-dropdown-menu:hover {
+        text-decoration: none;
+        color: hsl(0, 0%, 0%);
+        padding: 5px;
+    }
+
+    .link-dropdown-menu > img {
+        transition: transform .5s;
+    }
+
+    .link-dropdown-menu.active > img {
+        transform: rotate(180deg);
+    }
+
+    .link-dropdown-menu.active + .dropdown-menu {
+        transform: scaleY(1);
+    }
+
+    .dropdown-menu {
+        height: auto;
+        box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.2);
+        transform: scaleY(0);
+        transform-origin: top;
+        margin-top: 20px;
+        position: absolute;
+        list-style-type: none;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 10px;
+        transition: transform .2s;
+    }
+
+    .dropdown-menu > li {
+        padding: 8px;
+    }
+
+    .dropdown-menu > li > a {
+        color: hsl(0, 0%, 41%);
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .dropdown-menu > li > a > img {
+        margin: 0;
+        padding: 0 15px 0 0;
+    }
+
+    .buttons {
+        float: right;
+        margin-right: 0;
+    }
+
+    .info {
+
+    }
+
+    .info-image {
+        width: 100%;
+    }
+}
